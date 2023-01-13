@@ -1,7 +1,7 @@
 import React, { FC } from 'react'
 import styled from 'styled-components'
 import { VariantAnswer } from '../../types/Answer'
-import { BLACK, BLACK_40, ORANGE } from '../../theme/colors'
+import { BLACK, ORANGE } from '../../theme/colors'
 import { spacing } from '../../theme/helpers'
 
 type RootProps = {
