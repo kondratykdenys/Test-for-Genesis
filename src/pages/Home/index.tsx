@@ -11,7 +11,7 @@ const Home = () => {
       <img src={logoMillionaire} alt="logo Millionaire" />
       <ActionWrapper>
         <Title>Who wants to be a millionaire?</Title>
-        <Button onClick={() => navigate('/game/questions')}>Start</Button>
+        <Button onClick={() => navigate('/game')}>Start</Button>
       </ActionWrapper>
     </Root>
   )

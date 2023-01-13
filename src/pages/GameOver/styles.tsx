@@ -16,9 +16,15 @@ export const ActionWrapper = styled.div`
   margin-left: ${spacing(12.5)};
 `
 
-export const Title = styled.h1`
+export const Total = styled.h2`
+  font-weight: 600;
+  font-size: 32px;
+  color: ${BLACK};
+  margin-bottom: ${spacing(1)};
+`
+
+export const Sum = styled.h1`
   font-size: 56px;
-  max-width: 624px;
   color: ${BLACK};
   margin-bottom: ${spacing(8)};
 `

@@ -1,21 +1,23 @@
 import React from 'react'
 import { Root } from './styles'
 import Win from '../../../../compoents/Win'
+import { winnerSum } from '../../../../constants/winner'
+import { useAppSelector } from '../../../../hooks/app'
+import { resolvedQuestionUuidSelector } from '../../../../services/reducers/question'
 
 const WinBlock = () => {
+  const resolvedQuestionUuid = useAppSelector(resolvedQuestionUuidSelector)
   return (
     <Root>
-      <Win sum={1000} win={true} current={false} />
-      <Win sum={1000} win={true} current={false} />
-      <Win sum={1000} win={true} current={false} />
-      <Win sum={1000} win={true} current={false} />
-      <Win sum={1000} win={false} current={true} />
-      <Win sum={1000} win={false} current={false} />
-      <Win sum={1000} win={false} current={false} />
-      <Win sum={1000} win={false} current={false} />
-      <Win sum={1000} win={false} current={false} />
-      <Win sum={1000} win={false} current={false} />
-      <Win sum={100} win={false} current={false} />
+      {Array.from({ length: winnerSum.length })
+        .map((item, id) => (
+          <Win
+            sum={winnerSum[id]}
+            win={resolvedQuestionUuid.length > id}
+            current={resolvedQuestionUuid.length === id}
+          />
+        ))
+        .reverse()}
     </Root>
   )
 }

@@ -16,6 +16,8 @@ export const Question = styled.h2`
   font-weight: 600;
   font-size: 32px;
   color: ${BLACK};
+  padding-bottom: ${spacing(4)};
+  margin-bottom: auto;
 `
 
 export const AnswerBlock = styled.div`

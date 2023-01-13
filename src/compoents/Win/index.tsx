@@ -17,7 +17,7 @@ const Root = styled.div<RootProps>`
   align-items: center;
   justify-content: center;
   margin-bottom: ${spacing(1)};
-  color: ${({ win, current }) => (current ? ORANGE : win ? BLACK : BLACK_40)};
+  color: ${({ win, current }) => (current ? ORANGE : win ? BLACK_40 : BLACK)};
 
   background-image: ${({ current }) => {
     if (current) {
