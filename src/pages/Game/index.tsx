@@ -1,13 +1,13 @@
 import React from 'react'
 import { Root } from './styles'
 import QuestionBlock from './components/QuestionBlock'
-import Win from './components/Win'
+import WinBlock from './components/WinBlock'
 
 const Game = () => {
   return (
     <Root>
       <QuestionBlock />
-      <Win />
+      <WinBlock />
     </Root>
   )
 }

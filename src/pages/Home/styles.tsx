@@ -17,7 +17,6 @@ export const ActionWrapper = styled.div`
 
 export const Title = styled.h1`
   font-size: 56px;
-  line-height: 116%;
   max-width: 624px;
   color: ${BLACK};
   margin-bottom: 64px;
