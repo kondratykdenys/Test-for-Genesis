@@ -1,28 +1,46 @@
 import styled from 'styled-components'
-import { BLACK, BLACK_5 } from '../../../../theme/colors'
+import { BLACK } from '../../../../theme/colors'
 import { spacing } from '../../../../theme/helpers'
+import { device } from '../../../../theme/media'
 
 export const Root = styled.div`
-  min-height: 100vh;
-  background-color: ${BLACK_5};
   width: 100%;
-  padding: ${spacing(16, 10, 10)};
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  align-items: center;
+  flex: 1;
+  padding: ${spacing(1, 0)};
+
+  @media screen and ${device.laptop} {
+    padding: ${spacing(16, 5, 10)};
+    min-height: 100vh;
+  }
+
+  @media screen and ${device.laptopL} {
+    padding: ${spacing(16, 10, 10)};
+  }
 `
 
 export const Question = styled.h2`
   font-weight: 600;
   font-size: 32px;
   color: ${BLACK};
-  padding-bottom: ${spacing(4)};
   margin-bottom: auto;
+  padding: ${spacing(0, 1)};
+
+  @media screen and ${device.laptop} {
+    padding-bottom: ${spacing(4)};
+  }
 `
 
 export const AnswerBlock = styled.div`
   display: grid;
-  grid-template-columns: 323px 323px;
-  flex-wrap: wrap;
-  min-width: 646px;
+  grid-template-columns: 1fr;
+  justify-items: center;
+
+  @media screen and ${device.laptop} {
+    grid-template-columns: 1fr 1fr;
+    width: 646px;
+  }
 `

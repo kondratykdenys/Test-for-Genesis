@@ -9,10 +9,11 @@ const WinBlock = () => {
   const resolvedQuestionUuid = useAppSelector(resolvedQuestionUuidSelector)
   return (
     <Root>
-      {Array.from({ length: winnerSum.length })
+      {winnerSum
         .map((item, id) => (
           <Win
-            sum={winnerSum[id]}
+            key={item}
+            sum={item}
             win={resolvedQuestionUuid.length > id}
             current={resolvedQuestionUuid.length === id}
           />

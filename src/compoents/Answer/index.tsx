@@ -12,8 +12,9 @@ type RootProps = {
 const Root = styled.button<RootProps>`
   padding: ${spacing(0, 5)};
   font-size: 14px;
-  min-width: 322px;
-  min-height: 56px;
+  width: 320px;
+  height: 56px;
+  text-overflow: ellipsis;
   display: flex;
   align-items: center;
   border: none;

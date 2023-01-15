@@ -2,6 +2,7 @@ import React, { FC } from 'react'
 import styled from 'styled-components'
 import { BLACK_40, ORANGE, ORANGE_120, ORANGE_5, ORANGE_80 } from '../../theme/colors'
 import Loading from '../Loading'
+import { device } from '../../theme/media'
 
 const Root = styled.button`
   font-weight: 600;
@@ -11,7 +12,9 @@ const Root = styled.button`
   border-radius: 12px;
   border: none;
   padding: 21px 24px;
-  min-width: 296px;
+  @media screen and ${device.laptop} {
+    min-width: 296px;
+  }
   transition: 0.3s;
   cursor: pointer;
 
